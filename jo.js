@@ -1,9 +1,8 @@
-
 const key = "cfdbbba847c24d04830dd585368c81fc";
 const imges = document.getElementById("imges");
 const input = document.getElementById("inp");
 
-let btn = document.getElementById("bt")
+let btn = document.getElementById("bt");
 
 const getImges = async () => {
   // request To api
@@ -22,14 +21,14 @@ const getImges = async () => {
     }),
   })
     .then((im) => im.json())
-    
+
     .then((list) => {
       // this Array
-      
+
       const daat = [list.imageUrl, list.imageUrl, list.imageUrl];
-      
-    imges.innerHTML = ''
-    daat.map((e) => {
+
+      imges.innerHTML = "";
+      daat.map((e) => {
         // this div
         const cont = document.createElement("div");
         imges.append(cont);
@@ -37,10 +36,7 @@ const getImges = async () => {
         const img = document.createElement("img");
         img.src = e;
         cont.append(img);
+      });
     });
-      
-    });
-    input.value = ''
-    
+  input.value = "";
 };
-
