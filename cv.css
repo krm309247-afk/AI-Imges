@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+body{
+    
+    background-color: rgb(57, 57, 57);
+}
+.container{
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.promt{
+background-color: #292c31;
+    padding: 5px;
+    width: 620px;
+    border: solid 3px #36383d;
+    border-radius: 8px;
+}
+    .promt input,button{
+        padding: 10px;
+        font-size: 20px;
+        border: none;
+    }
+    .promt input{
+        width: 80%;
+        background-color:#292c31;
+        outline: none;
+    }
+        .promt button{
+            background-color: #36383d;
+            width: 18%;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover{
+            background-color: #45464a;
+        }
+.imges{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.imges div{
+    height: 200px;
+    width: 200px;
+    background-color: #292c31;
+    border-radius: 10px;
+
+}
+.imges div img{
+    width: 100%;
+}
+
+@media(max-width:756px){
+
+    .imges div{
+        width: 120px;
+        height:120px;
+    }
+    .promt{
+        width: 400px;
+    }
+}
